@@ -37,8 +37,10 @@ executable stones-exe
     , base
     , lucid
     , lucid-htmx
+    , mtl
     , servant-lucid
     , servant-server
+    , stm
     , text
     , wai
     , warp
@@ -60,8 +62,10 @@ test-suite stones-test
     , hspec
     , lucid
     , lucid-htmx
+    , mtl
     , servant-lucid
     , servant-server
+    , stm
     , stones
     , text
     , wai
