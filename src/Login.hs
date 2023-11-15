@@ -6,21 +6,23 @@ module Login
   ( LoginApi
   , loginHandler ) where
 
-import Lucid
+import Text.Blaze (ToMarkup)
+import qualified Text.Blaze.Html5 as H
+import qualified Text.Blaze.Html5.Attributes as A
+import qualified Text.Blaze.Htmx as HX
 import Servant
   ( Get,
     (:>),
   )
-import Servant.HTML.Lucid (HTML)
+import Servant.HTML.Blaze (HTML)
 import Monad (StonesHandler)
 
 data Login = Login
 
-instance ToHtml Login where
-  toHtml _ =
-    form_ $ do
-      input_ [type_ "text"]
-  toHtmlRaw _ = mempty
+instance ToMarkup Login where
+  toMarkup _ =
+    H.form 
+    $ H.input H.! A.type_ "text"
 
 type LoginApi = "login" :> Get '[HTML] Login
 

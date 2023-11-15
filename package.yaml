@@ -25,11 +25,12 @@ dependencies:
 - mtl
 - stm
 - servant-server
-- servant-lucid
+- servant-blaze
 - wai
 - warp
-- lucid
-- lucid-htmx
+- blaze-markup
+- blaze-html
+- blaze-htmx
 - text
 
 ghc-options:

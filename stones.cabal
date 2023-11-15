@@ -42,10 +42,11 @@ executable stones-exe
   build-depends:
       aeson
     , base
-    , lucid
-    , lucid-htmx
+    , blaze-html
+    , blaze-htmx
+    , blaze-markup
     , mtl
-    , servant-lucid
+    , servant-blaze
     , servant-server
     , stm
     , text
@@ -66,11 +67,12 @@ test-suite stones-test
   build-depends:
       aeson
     , base
+    , blaze-html
+    , blaze-htmx
+    , blaze-markup
     , hspec
-    , lucid
-    , lucid-htmx
     , mtl
-    , servant-lucid
+    , servant-blaze
     , servant-server
     , stm
     , stones
