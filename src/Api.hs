@@ -1,3 +1,5 @@
+{-# LANGUAGE TypeOperators #-}
+
 module Api
   ( Api
   , api ) where
@@ -18,8 +20,7 @@ type Api =
   HomeApi
     :<|> LoginApi
     :<|> GridApi
-    :<|> SquareApi
-    :<|> Raw
+    :<|> SquareApi :<|> Raw
 
 api :: ServerT Api StonesHandler
 api =

@@ -7,7 +7,6 @@ module Home
   , homeHandler) where
 
 import Lucid
-import Lucid.Htmx
 import Servant (Get)
 import Grid (nGrid, Grid)
 import Servant.HTML.Lucid (HTML)
@@ -19,7 +18,9 @@ instance (ToHtml a) => ToHtml (Home a) where
   toHtml (Home a) = html_ $ do
     head_ $ do
       title_ "Stones"
-      useHtmx
+      script_
+        [src_ "https://unpkg.com/htmx.org@1.9.8"]
+        ("" :: Html ())
       script_
         [src_ "https://cdn.tailwindcss.com"]
         ("" :: Html ())

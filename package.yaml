@@ -23,9 +23,9 @@ dependencies:
 - base >= 4.7 && < 5
 - aeson
 - mtl
+- stm
 - servant-server
 - servant-lucid
-- stm
 - wai
 - warp
 - lucid

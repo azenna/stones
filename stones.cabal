@@ -26,6 +26,13 @@ source-repository head
 executable stones-exe
   main-is: Main.hs
   other-modules:
+      Api
+      Grid
+      Home
+      Login
+      Monad
+      Square
+      Stone
       Paths_stones
   autogen-modules:
       Paths_stones

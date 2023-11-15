@@ -24,5 +24,5 @@ app stonesEnv = serve proxy $ hoistServer proxy (runStones stonesEnv) api
 
 main :: IO ()
 main = do
-  turn <- atomically $ newTVar White
-  run 8080 (app $ StonesEnv turn)
+  t <- atomically $ newTVar White
+  run 8080 (app $ StonesEnv t)

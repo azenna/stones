@@ -20,6 +20,7 @@ instance ToHtml Login where
   toHtml _ =
     form_ $ do
       input_ [type_ "text"]
+  toHtmlRaw _ = mempty
 
 type LoginApi = "login" :> Get '[HTML] Login
 
